@@ -16,7 +16,7 @@ import (
 func CreatePersonEndpoint(c echo.Context) error {
 	var newPerson models.Person
 	json.NewDecoder(c.Request().Body).Decode(&newPerson)
-	collection := db.Client.Database("people").Collection("people")
+	collection := db.Client.Database("insert database here").Collection("insert collection here")
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
 	result, err := collection.InsertOne(ctx, newPerson)

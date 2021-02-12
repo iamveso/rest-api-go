@@ -17,7 +17,7 @@ func main() {
 	var err error
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
-	db.Client, err = mongo.Connect(ctx, options.Client().ApplyURI("mongodb+srv://akpovee:ajirioghene@cluster0.020uy.mongodb.net/people?retryWrites=true&w=majority"))
+	db.Client, err = mongo.Connect(ctx, options.Client().ApplyURI("insert url here"))
 	if err != nil {
 		log.Fatal(err.Error())
 	}
